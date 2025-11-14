@@ -1,0 +1,37 @@
+# Sensitive configuration files
+config/*.conf
+!config/*.conf.example
+
+# Data directories (wallets, challenges, balances)
+data/
+vps/
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Mining runtime files
+wallets.json
+balances.json
+challenges.json
+*.log
+
+# SSH keys and credentials
+*.key
+*.pem
+id_*
+!*.pub
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
