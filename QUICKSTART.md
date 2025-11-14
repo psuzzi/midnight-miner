@@ -44,7 +44,8 @@ This will:
 make start-v01
 ```
 
-Mining will start automatically and generate 8 wallets with BIP39 recovery phrases.
+Mining will start automatically and generate 16 wallets with BIP39 recovery phrases.
+8 workers will mine simultaneously, selecting from the 16 available wallets.
 
 ## Daily Operations
 

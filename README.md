@@ -49,10 +49,14 @@ make backup-v01
 
 This miner implements an **optimized challenge selection strategy**:
 
-1. **Multi-Wallet Approach**: Runs 8 independent wallets to maximize solution potential
+1. **Multi-Wallet Approach**: Creates 16 wallets for 8 workers (2:1 ratio)
+   - Workers select from available wallets with unsolved challenges
+   - Reduces wallet contention and improves challenge selection
+   - Distributes solutions across multiple addresses
 2. **Challenge Accumulation**: Discovers and stores challenges over time
 3. **Smart Selection**: Always mines the easiest available challenge with sufficient deadline buffer
 4. **Deadline Safety**: 2-hour buffer ensures solutions are submitted before expiry
+5. **Dynamic Expansion**: Automatically creates more wallets if all 16 are busy
 
 ### Components
 
